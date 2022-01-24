@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance:textfield;
+  }
+
+
+  textarea:focus, input:focus{
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  body {
+      font-family: 'Space Mono', monospace;
+      font-size:  24px;
+      background-color: hsl(185, 41%, 84%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.42fr 1fr 0.5fr 1fr;
+    background-color: hsl(0, 0%, 100%);
+    padding: 2em;
+    border-radius: 25px;
+    margin-bottom: 3em;
+  }
+
+  input {
+    box-sizing: border-box;
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
+  }
+
+  img {
+      padding-top: 3em;
+      padding-bottom: 3em;
+  }
+
+  .moneySign {
+      background-image: url(images/icon-dollar.svg);
+      background-repeat: no-repeat;
+      background-position: 5%;
+  }
+
+  .peopleSign {
+    background-image: url(images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 5%;
+    }
+
+  .input {
+      height: 55px ;
+      color: hsl(183, 100%, 15%);
+      font-weight: 700;
+      text-align: end;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 30px;
+      border-radius: 5px;
+      background-color: hsl(189, 41%, 97%);
+  }
+
+  .margin {
+    margin-top: 0.5em;
+  }
+
+  .tipButtons {
+      font-weight: 700;
+      display: inline-block;
+      color: hsl(0, 0%, 100%);
+      background-color: hsl(183, 100%, 15%);
+      margin: 10px;
+      padding: 1em;
+      border-radius: 5px;
+      max-height: 50px;
+      text-align: center;
+      line-height: 25%;
+      text-decoration: none;
+  }
+
+  .buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .label {
+      font-size: 20px;
+      margin-bottom: 15px;
+      display: block;
+      font-weight: 700;
+      color: hsl(186, 14%, 43%)
+  }
+
+  .tip {
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      padding: 1em;
+      color: white;
+      background-color: hsl(183, 100%, 15%);
+  }
+
+  .first {
+      margin-bottom: 5px;
+      display: block;
+      font-weight: 700;
+      font-size: 20px;
+  }
+
+  .second {
+      display: block;
+      font-weight: 500;
+      font-size: 15px;
+      color: hsl(184, 14%, 56%);
+  }
+
+  .tipSection {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      margin-bottom: 1em;
+  }
+
+  .result{
+    display: flex;
+    justify-content: flex-end;
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+    font-size: 30px;
+  }
+
+  .reset {
+      background-color: hsl(172, 67%, 45%);
+      color: hsl(183, 100%, 15%);
+      font-weight: 700;
+      text-align: center;
+      border-radius: 5px;
+      min-height: 55px;
+      line-height: 200%;
+  }
+
+  .customDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .customTip {
+    width: 161px;
+    font-size: 20px;
+    padding-right: 5px;
+  }
+
+  .tipButtons:hover {
+    background-color: hsl(172, 50%, 73%);
+    color: hsl(183, 100%, 15%);
+  }
+
+  .reset:hover {
+    background-color: hsl(172, 50%, 73%);
+  }
+
+  .active {
+    border: 3px solid hsl(172, 67%, 45%);
+  }
+
+  input:focus {
+    outline: 3px solid hsl(172, 67%, 45%);
+    height: 52px;
+  }
+  
+
+  input:out-of-range{
+    outline: 3px solid red;
+  }
+
+
+  @media (min-width: 900px) { 
+
+    main{
+      display: grid;
+      grid-template-areas: 
+          "bill total"
+          "tip total"
+          "people total"
+      ;
+    }
+
+    .billArea {
+      grid-area: bill;
+    }
+
+    .tipArea {
+      grid-area: tip;
+    }
+
+    .totalArea {
+      grid-area: total;
+    }
+
+    .peopleArea {
+      grid-area: people;
+    }
+
+  }
+
+
+
+
+

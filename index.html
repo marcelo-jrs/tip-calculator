@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body>
+  <img src="images/logo.svg">
+  <form action="#">
+    <main>
+      <div class="billArea">
+        <span class="label">Bill</span>
+        <input name="bill" type="number" class="input moneySign" name="billInput">
+      </div>
+
+      <div class="tipArea">
+        <span class="label">Select Tip %</span>
+        <div class="buttons">
+          <a class="tipButtons" href="#">5%</a>
+          <a class="tipButtons" href="#">10%</a>
+          <a class="tipButtons" href="#">15%</a>
+          <a class="tipButtons" href="#">25%</a>
+          <a class="tipButtons" href="#">50%</a>
+          <div class="customDiv">
+          <input class="customTip input" href="#" type="number" placeholder="Custom" min="5"></input>
+        </div>
+        </div>
+      </div>
+
+      <div class="peopleArea">
+        <span class="label">Number of people</span>
+        <span class="error"></span>
+        <input name="people" type="number" class="input peopleSign" name="peopleInput" min="1">
+      </div>
+
+      <div class="section tip totalArea">
+        <div class="tipSection">
+          <div>
+            <span class="first">Tip Amount</span>
+            <span class="second">/ person</span>
+          </div>
+          <span class="result ">aaaa</span>
+        </div>
+        <div class="tipSection">
+          <div>
+            <span class="first">Total</span>
+            <span class="second">/ person</span>
+          </div>
+          <span class="result ">aaaa</span>
+        </div>
+
+        <a class="reset">Reset</a>
+
+      </div>
+    </main>
+  </form>
+  <!--
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Marcelo Júnior</a>.
+  </div>-->
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
